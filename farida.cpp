@@ -24,7 +24,7 @@ int main()
 	{
 		memset(dp,-1,sizeof dp);
 		cin>>n;
-		ll a[n],i;
+		ll i;
 		for(i=0;i<n;i++)
 			cin>>a[i];
 		cout<<"Case "<<j++<<": "<<f(a,n,0)<<endl;

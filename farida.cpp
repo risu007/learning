@@ -1,15 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 #define ll long long int
-ll f(ll *a,ll n,ll ini)
+
+ll dp[1005];
+ll a[1005];
+ll n;
+ll f(ll ini)
 {
-	ll sum,temp=0,i;
-	for(i=ini;i<n;i++)
+	if(ini==n)
+		return 0;
+	if(dp[ini]==-1)
 	{
-		sum=a[i]+f(a,n,i+2);
-		temp=max(sum,temp);
+		dp[ini] = 0;
+		dp[ini] = max(dp[ini+1],a[ini]+dp[ini+2]);
 	}
-	return temp;
+	return dp[ini];
 }
 int main()
 {
@@ -17,7 +22,7 @@ int main()
 	cin>>t;
 	while(t--)
 	{
-		int n;
+		memset(dp,-1,sizeof dp);
 		cin>>n;
 		ll a[n],i;
 		for(i=0;i<n;i++)

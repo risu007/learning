@@ -1,0 +1,31 @@
+%% This BFS implementation in prolog
+
+child(0,[1,2,3,5]).
+child(1,[0,2,3,4]).
+child(2,[0,1,6]).
+child(3,[0,1,5]).
+child(4,[1]).
+child(5,[0,3,7]).
+child(6,[2]).
+child(7,[5]).
+ 
+pop([],[],-1).
+pop([H|T],T,H).
+ 
+ 
+exist(X,[H|T]):-(X==H;exist(X,T)),!.
+insert([],_,L,L).
+insert([H|T],V,L,Result):- insert(T,V,L,Temp),(((exist(H,V),append(Temp,[],Result));append(Temp,[H],Result))).
+push(X,QUE,RQUE,VIS):-child(X,Child),insert(Child,VIS,QUE,RQUE).
+ 
+bfs([],_).
+bfs(QUE,VIS):-
+    pop(QUE,RQUE,P),
+    append([P],VIS,NVIS),
+    (exist(P,VIS);write(P),write(" ")),
+    push(P,RQUE,FQUE,NVIS),
+    bfs(FQUE,NVIS),!.
+ 
+ 
+%Call bfs(source,empty list)
+%child represents the graph

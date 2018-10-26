@@ -3,11 +3,7 @@
 
 // Kruskal’s Algorithm
 
-#include <iostream>
-#include <vector>
-#include <utility>
-#include <algorithm>
-
+#include <bits/stdc++.h>
 using namespace std;
 const int MAX = 1e4 + 5;
 int parent[MAX], nodes, edges;

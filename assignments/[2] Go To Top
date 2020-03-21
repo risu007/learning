@@ -1,0 +1,15 @@
+Go To Top
+<p>
+There are n steps in a staircase. <br>
+You are currently at 0th step. <br>
+You need to reach the nth step in the staircase. <br>
+You can only move upwards. <br>
+At a time you can take a jump of 5 or 7 steps. <br>
+You need to determine whether you can reach the top or not.<br>
+</p>
+
+For example,<br>
+n=3, false <br>
+n=5, true <br>
+
+You need to output "true" or "false" for any n < 1000000

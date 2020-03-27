@@ -9,7 +9,7 @@ What will be the size of bucket so that the number of buckets required is minimu
 For example,
 
 a=1,b=3
-Output is 4.
+Output is 1.
 
 a=2,b=4
-output is 3.
+output is 2.

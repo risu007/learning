@@ -5,3 +5,11 @@
 * Buckets can only store completely. 
 
 What will be the size of bucket so that the number of buckets required is minimum?
+
+For example,
+
+a=1,b=3
+Output is 4.
+
+a=2,b=4
+output is 3.
